@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+*::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(158, 156, 156);
+}
+*::-webkit-scrollbar-thumb{
+    width: 8px;
+    background: rgb(42, 28, 65);
+    border-radius: 8px;
+}
+body{
+    background-color: rgb(224, 219, 215);
+    text-align: center;
+}
+header{
+    align-items: center;
+    justify-content: center;
+    display: block;
+    text-align: center;
+}
+h1{
+    color: rgb(107, 39, 2);
+    padding: 2%;
+}
+nav{
+    padding: 1%;
+    background-color: rgba(26, 122, 225, 0.686);
+    text-align: center;
+    margin-bottom: 1%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    cursor: pointer;
+    padding-right: 100px;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: aqua;
+    font-size: 20px;
+}
+
+nav ul li :hover{
+    text-shadow: 1px 2px  3px grey;
+}
+nav ul li::after{
+    content: " |";
+}
+nav ul li:last-child::after{
+    content: "";
+}
+#about{
+    z-index:1;
+}
+
+.div0{
+    background-color: rgba(219, 209, 209, 0.753) ;
+    padding: 2px;
+    height: auto;
+    direction: rtl;
+    
+}
+
+.bd{
+    background: #0f4675;
+    padding-top:10px ;
+    direction: rtl;
+    width: 100%;
+}
+.bd>h1{
+    font-size: 28px;
+    color: #fcc4d2;
+}
+.body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#0f4675,#0f4675 50%, #fff 50%, #fff 100%);
+}
+    .eco{
+        box-sizing: border-box;
+        margin:0;
+        padding: 0;
+        width: 300px;
+        height: 300px;
+    }
+    .container{
+        width: 1100px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .container .box{
+        width: 320px;
+        position: relative;
+        background: #fff;
+        padding:10px;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .1);
+        word-wrap: break-word;
+    }
+    .container .box::before{
+        content: '';
+        position: absolute;
+        top:0;left:0;
+        width: 100%;
+        height: 100%;
+        background: #ff0040;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .5s;
+    }
+    .container .box:hover::before{
+        transform: scaleY(1);
+        transform-origin:bottom ;
+        transition: transform .5s;
+    }
+    .container .box h2{
+        position: absolute;
+        color: #a50e33;
+        left: 40px;top: 60px;
+        font-size: 4em;
+        font-weight: 800;
+        z-index: 1;
+        transition: 0.1;
+        opacity: .1;
+    }
+    .container .box p{
+        position: absolute;
+        color: #cc1e49;
+        left:0;top: 150px;
+        font-size: 1em;
+        font-weight: 48;
+        z-index: 1;
+        transition: 0.1;
+        opacity: .1;
+    }
+    .container .box:hover p{
+        padding: 5px;
+        display: block;
+        opacity: 1;
+        color: rgb(237, 233, 233);
+        transform: translateY(-30px);
+        transition: .3s linear;
+    }
+    .container .box:hover h2{
+        opacity: 1;
+        color: rgb(66, 16, 16);
+        transform: translateY(-40px);
+        transition: linear .2s;
+    }
+    .container .box h3{
+        position: relative;
+        font-size: 1.5em;
+        z-index: 2;
+        color: #333;
+        transition: .5s;
+    }
+    
+/*div container*/
+.d1{
+padding-left: 1%;
+padding-top: 1%;
+width: 100%;
+height: 300px;
+background-color: rgb(6, 67, 108);
+align-items: center;
+}
+/*div childs*/
+.d1 div{
+margin-top: -8px;
+overflow: hidden;
+border-radius: 5px;
+display: inline-block;
+width: 32%;
+margin-left: 1%;
+height: 100%;
+padding-left: 7px ;
+background-position: center;
+}
+/*hover div child and content*/
+.d1 div:hover img ,.d1 div:hover p{
+color: rgb(42, 1, 1);
+transform: scale(1.8) rotate(2deg);
+opacity: .1;
+}
+/*css image and para*/
+.d1 div img{
+margin: 0;
+padding: 0 0 20px 15px;
+transition: .4s;
+}
+    
+.d1{
+    width: 78%;
+    height: 30%;
+    text-align:left;
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: rgb(5, 46, 46);
+}
+.d1 div{
+    display: inline-block;
+    text-align: left;
+    height: 30%;
+    width: 26%;
+    margin:0;
+    padding:0;
+    background-color: rgb(4, 44, 44);
+}
+.d1 div:hover{
+    background-color: rgba(10, 73, 73, 0.833);
+    margin: 0;
+    padding: 0;
+    border-radius: 0px 10px 0 10px ;
+}
+/*--------------bgimg*/
+.bgimg{
+    width: 100%;
+    height: 300px;
+    z-index: 0;
+    background-image: url('../images/network.jpg');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+/*--------------------------------------content*/
+.content{
+    display: flex;
+    padding-right: 1%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    background:#fff;
+}
+.contenu{
+    margin-left: 1%;
+    word-wrap: break-word;
+    padding: 1%;
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+}
+.contenu p{
+    width: 90%;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contenu:nth-child(1){
+    background-color: rgba(255, 68, 0, 0.263);
+}
+.contenu:nth-child(2){
+    background-color: rgba(0, 221, 255, 0.174);
+}
+.contenu:nth-child(3){
+    background-color: rgba(255, 0, 38, 0.199);
+}
+.contenu:nth-child(4){
+    background-color: rgba(128, 255, 0, 0.208);
+}
+.jpg{
+    border: 1px solid sandybrown;
+    margin-top: 2%;
+    width: 90%;
+    height: 80%;
+}
+/*--------------------------------------footer==>./CSS fiel*/

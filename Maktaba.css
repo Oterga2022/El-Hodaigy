@@ -1,0 +1,322 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+body{
+    min-height: 100vh;
+}
+header{
+position: fixed;
+top: 0;left: 0;right: 0;
+background-color: rgb(175, 76, 59);
+box-shadow: 0 5px 10px rgba(0, 0,0, .5);
+padding: 0px 7px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 25px;
+    color: rgb(86, 1, 1);
+}
+header .logo:hover{
+    background-color: rgb(105, 223, 227);
+    color: rgb(246, 21, 21);
+    transition: all ease-in-out .4s;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    width: 200px;
+    display: inline-block;
+}
+header .navbar ul li a{
+    text-transform: uppercase;
+    display:block;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(3, 61, 66);
+    background-color: rgba(10, 54, 85, 0.915);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 25px;
+}
+header nav input {
+    color: rgb(6, 27, 29);
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 4px 8px 2px 20px;
+    box-shadow: 1px 4px 5px rgb(111, 102, 102);
+    border: 1px solid rgb(105, 30, 30);
+ }
+ header nav:hover> input, header nav:focus-within> input  {
+    color: rgb(6, 27, 29);
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 5px 8px 3px 20px;
+    box-shadow: 1px 4px 5px rgb(83, 75, 75);
+    border: 1px solid rgb(201, 37, 37);
+    box-sizing: border-box;
+ }
+header .navbar ul li a:hover{
+    background-color: brown;
+    color: azure;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: none;
+    color: #333;
+    margin-top: 2px;
+}
+header .navbar ul li ul li a{
+    font-size: 16px;
+}
+header .navbar ul li ul li{
+    border-top:  1px solid rgba(0, 0, 0, 0.336);
+    width: 100%;
+}
+header .navbar ul li ul li ul{
+    top: 0;
+    left:200px;
+    color: rgb(47, 46, 46);
+}
+header .navbar ul li:focus-within >ul, header .navbar ul li:hover >ul{
+    display: initial;
+    transition: ease-in-out .4s linear;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    color: #222;
+}
+
+
+
+@media(max-width:824px){
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+        transition: .3s ease-in-out linear;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        display:none;
+        left: 0;
+        right:0;
+        background-color: aquamarine;
+        border-top: 1px solid rgb(92, 7, 7);
+    }
+    header .navbar ul{
+        width: 30%;
+        display: block;
+    }
+    header .navbar ul li{
+        width: 100%;
+        display: block;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background-color: rgb(225, 219, 219);
+    }
+    header .navbar ul li ul li{
+        width:100% ;
+        left: 0;
+    }
+    #menu-bar:checked~ .navbar{
+        display: initial;
+        transition:  .3s ease-in-out linear;
+    }
+
+}
+/*---------------------bnts inscription and learn more-------------------*/
+@media (max-width: 780px){
+    article div button{
+        border: 1px solid rgb(255, 47, 0);
+        height: 4%;
+    }
+    .btns button{
+        width: 40%;
+        border-radius: 1px;
+        margin-left: 1%;
+    }
+    #logo{
+        width: 8%;
+        height: 8%;
+        text-align: left;
+        padding: 0%;
+        margin:1% 10%;
+    }
+    .d1{
+        width: 78%;
+        height: 30%;
+        text-align:left;
+        margin: 0;
+        padding: 0;
+        display: block;
+        background: rgb(5, 46, 46);
+    }
+    .d1 div{
+        display: inline-block;
+        text-align: left;
+        height: 30%;
+        width: 26%;
+        margin:0;
+        padding:0;
+        background-color: rgb(4, 44, 44);
+    }
+    .d1 div:hover{
+        background-color: rgba(10, 73, 73, 0.833);
+        margin: 0;
+        padding: 0;
+        border-radius: 0px 10px 0 10px ;
+    }
+}
+.btns input{
+    font-size: 32px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 100px;
+    border-radius: 3px;
+    padding:10px;
+    width: 25%;
+    box-shadow: 0px 10px 20px  rgb(54, 86, 38);
+    background: rgba(255, 1, 1, 0.776);
+    color: rgb(71, 246, 2);
+    border: 1px solid rgb(0, 250, 0);
+    transition:transform .3s;
+}
+.btns input:hover, .btns input:focus-within{
+    color: rgb(179, 7, 7);
+    background: rgba(37, 255, 3, 0.739);
+    box-shadow: 1px 15px 30px  rgb(87, 41, 41);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 0;
+    transition: transform .2s;
+}
+.btns{
+    padding: 2%;
+    text-align: justify;
+    margin-top: 5%;
+    width: 100%;
+}
+.presentation{
+   animation: presentation 120s linear infinite;
+}
+@keyframes presentation {
+        0%{
+            background-image: url("animals.jpg");
+            background-size: 100% 100%;
+        }
+        10%{
+            background-image: url("bg.jpg");
+            background-size: 100% 100%;
+        }
+        20%{
+            background-image: url("book.jpg");
+            background-size: 100% 100%;
+        }
+        30%{
+
+            background-image: url("book-6.jpg");
+            background-size: 100% 100%;
+        }
+        40%{
+            background-image: url("watch.jpg");
+            background-size: 100% 100%;
+        }
+        50%{
+            background-image: url("network.jpg");
+            background-size: 100% 100%;
+        }
+        60%{
+            background-image: url("communication.jpg");
+            background-size: 100% 100%;
+        }
+        70%{
+            background-image: url("Digitalnews.jpg");
+            background-size: 100% 100%;
+        }
+        80%{
+            background-image: url("social-media.jpg");
+            background-size: 100% 100%;
+        }
+        90%{
+            background-image: url("city.jpg");
+            background-size: 100% 100%;
+        }
+        100%{
+            background-image: url("student.jpg");
+            background-size: 100% 100%;
+        }
+}
+/*-------------------inscription---------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a{
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*-------------------Footer---------------*/
+footer{
+    text-align: center;
+    background-color: rgb(71, 55, 55);
+    color: #ffeaea;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 5%;
+    padding-top: 1%;
+
+    width: 90% auto;
+}
+/*---------------- leign -------------*/
+hr{
+    border: 3px solid skyblue;
+    width: 90% ;
+    margin-left: 10%;
+}
+hr:hover{
+    border: 3px solid rgb(9, 46, 61);
+    margin: 0;
+    width: 100%;
+}
+/*----------------clear float---------------------------*/
+ .flo{
+        clear: both;
+    }
